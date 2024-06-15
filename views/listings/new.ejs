@@ -1,0 +1,43 @@
+<% layout("/layouts/boilerplate")%>
+
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Create A new Listings</h3>
+    <!-- listing me keyvalue pairs me data store krliya data as js object -->
+    <form action="/listings" method="POST" >
+       <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="listing[title]" placeholder="Add a title" class="form-control">
+        
+       </div>
+       <div  class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <textarea name="listing[description]" id="" placeholder="Enter description"  class="form-control"></textarea>
+       </div>
+       <div  class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input name="listing[image]" id="" placeholder="Enter image URL/Link " class="form-control">
+       </div>
+       <div class="row">
+        <div class="mb-3 col-md-3">
+            <label for="price" class="form-label"> Price</label>
+            <input type="number" name="listing[price]" placeholder="Enter Price" class="form-control">
+        </div>
+        <div  class="mb-3 col-md-9">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="listing[country]" placeholder="Enter Country" class="form-control">
+                
+        </div>
+       </div>
+       <div  class="mb-3 "> 
+        <label for="location" class="form-label"> Location</label>
+        
+         <input type="text" name="listing[location]" placeholder="Enter Location" class="form-control">
+      </div>
+        <br>
+        <button class="btn btn-dark add-btn">Add</button> <br><br>
+    </form>
+</div>
+</div>
+</body>

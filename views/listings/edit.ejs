@@ -1,0 +1,54 @@
+<% layout("/layouts/boilerplate")%>
+
+<body>
+   <div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h3>Edit Listings</h3>
+        <!-- listing me keyvalue pairs me data store krliya data as js object -->
+        <form method="POST" action = "/listings/<%=listing._id%>?_method=PUT">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+           
+                <input type="text" name="listing[title]" value="<%=listing.title %>"  class="form-control">
+           
+            </div>
+            <div class="mb-3">
+                <label for="Description" class="form-label">Description</label>
+           
+                <textarea name="listing[description]" class="form-control"><%=listing.description%></textarea>
+            
+            </div>
+            
+            <div class="mb-3">
+                <label for="Image" class="form-label">Image</label>
+           
+                <input name="listing[image]" id="" value = "<%=listing.image%>" class="form-control">
+            
+            </div>
+           <div class="row">
+            <div class="mb-3 col-md-3" >
+                <label for="price" class="form-label"> Price</label>
+               
+    
+                <input type="number" name="listing[price]" value="<%=listing.price %>" class="form-control">
+            
+            </div>
+            <div class="mb-3 col-md-9">
+                <label for="country" class="form-label">Country</label>
+                 
+                <input type="text" name="listing[country]"  value="<%=listing.country %>" class="form-control">
+                
+               </div>
+           </div>
+           <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+              
+            <input type="text" name="listing[location]" value="<%=listing.location %>" class="form-control">
+            
+           </div>
+          
+            <button class=" btn btn-dark add-btn mt-3">Edit</button><br><br>
+        </form>
+    </div>
+   </div>
+</body>
